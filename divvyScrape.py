@@ -5,11 +5,6 @@ from bs4 import BeautifulSoup
 
 def printTimeStats(title, seconds):
     print(f'{title}: {seconds // 3600}h {seconds % 3600 // 60}m {seconds % 60}s')
-    hours = seconds // 3600
-    seconds %= 3600
-    minutes = seconds // 60
-    seconds %= 60
-    print('%s: %sh %sm %ss'%(title, hours, minutes, seconds))
 
 def printCostStats(seconds, trips, start, end):
     cost = 75
@@ -18,9 +13,10 @@ def printCostStats(seconds, trips, start, end):
     costPerHour = cost / seconds * 3600
     costPerTrip = cost / trips
     estimatedCostPerHour = (daysSoFar / days * cost) / seconds * 3600
+    estimatedCostPerTrip = (daysSoFar / days * cost) / trips
     print(f'Trips: {trips}')
     print('So Far: $%.2f/hr, $%.2f/trip'%(costPerHour, costPerTrip))
-    print('Estimated Overall: $%.2f/hr'%(estimatedCostPerHour))
+    print('Estimated Overall: $%.2f/hr, $%.2f/trip'%(estimatedCostPerHour, estimatedCostPerTrip))
 
 def scrapeDivvy():
     totalSeconds = 0
