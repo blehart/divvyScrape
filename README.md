@@ -1,3 +1,9 @@
+# Divvy Scrape
+
+Trips are separated by month on the Divvy website, so I just do a 'Save Page As... Web Page, Html Only' for each month, and run this script in the same directory as all the html files.
+
+Cost / number of days of membership are hardcoded in the printCostStats function.
+
 # Example Output
 
 divvy_9_2018.html: 9h 41m 23s, 41 trips
