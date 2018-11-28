@@ -4,7 +4,7 @@ Trips are separated by month on the Divvy website, so I just do a 'Save Page As.
 
 Cost / number of days of membership are hardcoded in the printCostStats function.
 
-# Example Output
+## Example Output
 
 divvy_9_2018.html: 9h 41m 23s, 41 trips
 
